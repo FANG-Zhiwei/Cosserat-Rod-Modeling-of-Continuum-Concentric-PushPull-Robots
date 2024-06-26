@@ -21,6 +21,7 @@ Config.L = Config.Li;
 if Config.nb_tubes == 3
     
     % definition of geometric variables
+    % anonymous function function with input X
     Config.K_0{1} = @(X) 0*2*pi/(Config.Li);
 
     Config.D{1} = @(X) (1e-3)*(1.12);

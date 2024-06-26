@@ -11,7 +11,7 @@ T(1) = 0;
 q_0   = Const.q_0;
 r_0   = Const.r_0;
 
-% Définition of the desired control values
+% Definition of the desired control values
 a_2 = [-10:1:10];
 a_3 = a_2;
 thetam_2 = 0;
@@ -78,7 +78,7 @@ for it_simu = 1:N_simu
     end
     % Drawing
     [QX_T,rX_T] = Reconstruction_Notch_3D(q_0,r_0,Const,Config);
-    title(['a = ' num2str(ad(2)*1000) 'mm, \theta = ' num2str(thetam_d(2) *180/pi) '°'])
+    title(['a = ' num2str(ad(2)*1000) 'mm, \theta = ' num2str(thetam_d(2) *180/pi) 'ï¿½'])
 
     % Assignment of the converged state when r<r_min
     q(:,it_simu+1)         = q_np1_kp1;

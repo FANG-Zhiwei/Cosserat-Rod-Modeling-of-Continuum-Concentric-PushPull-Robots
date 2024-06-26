@@ -214,9 +214,16 @@ for it=1:max(size(X))
         Z_2(it,it_theta ) = temp(3);
     end
 end
+
+ptCloud = pcread('test65536.pcd');
+
 figure(200)
-surf(-Y_1,-Z_1,X_1,'EdgeColor','none','FaceAlpha',0.5,'Facecolor',[0.41,0.81,0.70])
+
+pcshow(ptCloud)
 hold on
+
+surf(-Y_1,-Z_1,X_1,'EdgeColor','none','FaceAlpha',0.5,'Facecolor',[0.41,0.81,0.70])
+
 surf(-Y_2,-Z_2,X_2,'EdgeColor','none','FaceAlpha',1,'Facecolor',[0.96,0.40,0.33])
 grid on 
 
